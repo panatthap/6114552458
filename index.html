@@ -30,42 +30,10 @@
       chart.draw(data, options);
     }
 </script>
-    <script>
-       google.charts.load('current', {'packages':['bar']});
-      google.charts.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'ราคาข้าวเปลือกหอมมะลิ', 'ราคาข้าวเหนียว','ราคาข้าวเจ้า'],
-          ['2555',  15365,      11925 ,10156],
-          ['2556',  14859,      12586 ,8763],
-          ['2557',  12914,       10141 ,7753],
-          ['2558',  11981,      11530 ,7696],
-          ['2559',  8795,      10666 ,7545],
-          ['2560',  11433,      9156 ,7905],
-          ['2561', 15199,      9834 ,7892 ]
-        ]);
-
-        var options = {
-          chart: {
-            title: 'ราคาข้าวตั้งแต่ปี 2555-2561',
-            subtitle: 'ข้าว 3 ชนิด ข้าวหอมมะลิ,ข้าวเหนียว,ข้าวเจ้า',
-          },
-          bars: 'vertical',
-          vAxis: {format: 'decimal'},
-          height: 400,
-          width:750,
-          colors: ['#1b9e77', '#d95f02', '#7570b3']
-        };
-
-        var chart = new google.charts.Bar(document.getElementById('pie_div'));
-
-        chart.draw(data, google.charts.Bar.convertOptions(options));  
-      }
-    </script>
+    
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
-    <div id="pie_div" style="width: 750px; height: 400px;"></div>
+  
   </body>
 </html>
