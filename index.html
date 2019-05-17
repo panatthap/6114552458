@@ -31,7 +31,7 @@
     }
 </script>
     <script type="text/javascript">
-            google.charts.load('current', {'packages':['bar']});
+      google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
@@ -63,9 +63,51 @@
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
       </script>
+    
+    <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Price'],
+          ['2540',7404],
+['2541',8298],
+['2542',6737],
+['2543',7017],
+['2544',5725],
+['2545',5328],
+['2546',6940],
+['2547',8460],
+['2548',7685],
+['2549',8032],
+['2550',9176],
+['2551',12536],
+['2552',13819],
+['2553',13171],
+['2554',14961],
+['2555',15365],
+['2556',14859],
+['2557',12914],
+['2558',11981],
+['2559',8795],
+['2560',11433],
+['2561',15199]
+]);
+
+        var options = {
+          title: 'ราคาข้าวหอมมะลิ ตั้งแต่ปี 2540-2561',
+          legend: { position: 'none' },
+        };
+
+        var chart = new google.visualization.Histogram(document.getElementById('histochart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
-   <div id="timechart_div"></div>
+    <div id="timechart_div"></div>
+    <div id="histochart_div" style="width: 700px; height: 400px;"></div>
   </body>
 </html>
