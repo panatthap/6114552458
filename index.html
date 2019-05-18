@@ -252,12 +252,91 @@
         chart.draw(data, options);
       }
      </script>
+   <script type="text/javascript"> 
+     google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['province','grow','harvest'],
+['Ubon Ratchathani',3862476,3756344],
+['Nakhon Ratchasima',3485040,3293027],
+['Surin',3070854,2907781],
+['Roi Et',3060688,2559916],
+['Si Sa Ket',2976620,2781252],
+['Buri Ram',2733058,2557463],
+['Khon Kaen',2340107,2086468],
+['Nakhon Sawan',2244179,1962115],
+['Sakon Nakhon',2092935,1727322],
+['Maha Sarakham',2070655,1795034],
+['Udon Thani',1740138,1600668],
+['Phichit',1560079,1453351],
+['Chaiyaphum',1557837,1426790],
+['Kalasin',1444033,1257993],
+['Nakhon Phanom',1334512,1193357],
+['Phitsanulok',1304183,1227901],
+['Yasothon',1297553,1162554],
+['Suphan Buri',1202932,1210535],
+['Chiang Rai',1201535,1140632],
+['Kamphaeng Phet',1181020,1114976],
+['Phetchabun',1066788,1046293],
+['Sukhothai',960884,896574],
+['Amnat Charoen',938876,923609],
+['Chai Nat',748298,819253],
+['Sa Kaeo',720898,656876],
+['Phra Nakon Si Ayutthaya',716290,753210],
+['Lop Buri',704588,725879],
+['Nong Bua Lam Phu',698288,627990],
+['Phayao',622640,599666],
+['Chachoengsao',618953,611254],
+['Uttaradit',544985,556242],
+['Nong Khai',519570,507668],
+['Mukdahan',489893,458062],
+['Bueng Kan',489124,466743],
+['Uthai Thani',475918,477594],
+['Chiang Mai',440005,433838],
+['Lampang',421891,426847],
+['Prachin Buri',398023,391461],
+['Kanchanaburi',378076,373687],
+['Loei',371883,402769],
+['Nakhon Nayok',355831,363825],
+['Saraburi',327596,322306],
+['Nakhon Pathom',321852,307415],
+['Ang Thong',316410,346382],
+['Pathum Thani',311373,310356],
+['Phetchaburi',289808,287614],
+['Sing Buri',287652,322482],
+['Phrae',283631,292096],
+['Ratchaburi',255225,243669],
+['Nan',221601,266161],
+['Nakhon Si Thammarat',220920,195659],
+['Tak',219940,273499],
+['Songkhla',190242,176137],
+['Mae Hong Son',160641,163467],
+['Phatthalung',128984,119647],
+['Lamphun',116962,115858]
+
+        ]);
+
+        var options = {
+          title: 'Age vs. Weight comparison',
+          hAxis: {title: 'grow', minValue: 100000, maxValue:900000},
+          vAxis: {title: 'harvest', minValue: 100000, maxValue: 900000},
+          legend: 'none'
+        };
+
+        var chart = new google.visualization.ScatterChart(document.getElementById('corchart_div'));
+
+        chart.draw(data, options);
+      }
+   </script> 
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
-    <div id="timechart_div"></div>
-    <div id="histochart_div" style="width: 700px; height: 400px;"></div>
     <div id="regions_div" style="width: 900px; height: 500px;"></div>
     <div id="devichart_div" style="width: 900px; height: 500px;"></div>
+    <div id="timechart_div"></div>
+    <div id="histochart_div" style="width: 700px; height: 400px;"></div>
+    <div id="corchart_div" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
