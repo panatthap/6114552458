@@ -70,7 +70,7 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Year', 'Price'],
-          ['2540',7404],
+['2540',7404],
 ['2541',8298],
 ['2542',6737],
 ['2543',7017],
@@ -103,11 +103,117 @@
         chart.draw(data, options);
       }
     </script>
+ <script type="text/javascript">
+  google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'area'],
+['Chiang Rai',1201535],
+['Phayao',622640],
+['Lampang',421891],
+['Lamphun',116962],
+['Chiang Mai',440005],
+['Mae Hong Son',160641],
+['Tak',219940],
+['Kamphaeng Phet',1181020],
+['Sukhothai',960884],
+['Phrae',283631],
+['Nan',221601],
+['Uttaradit',544985],
+['Phitsanulok',1304183],
+['Phichit',1560079],
+['Nakhon Sawan',2244179],
+['Uthai Thani',475918],
+['Phetchabun',1066788],
+['Loei',371883],
+['Nong Bua Lam Phu',698288],
+['Udon Thani',1740138],
+['Nong Khai',519570],
+['Bueng Kan',489124],
+['Sakon Nakhon',2092935],
+['Nakhon Phanom',1334512],
+['Mukdahan',489893],
+['Yasothon',1297553],
+['Amnat Charoen',938876],
+['Ubon Ratchathani',3862476],
+['Si Sa Ket',2976620],
+['Surin',3070854],
+['Buri Ram',2733058],
+['Maha Sarakham',2070655],
+['Roi Et',3060688],
+['Kalasin',1444033],
+['Khon Kaen',2340107],
+['Chaiyaphum',1557837],
+['Nakhon Ratchasima',3485040],
+['Saraburi',327596],
+['Lop Buri',704588],
+['Sing Buri',287652],
+['Chai Nat',748298],
+['Suphan Buri',1202932],
+['Ang Thong',316410],
+['Phra Nakhon Si Ayutthaya',716290],
+['Nonthaburi',87806],
+['Bangkok',88886],
+['Pathum Thani',311373],
+['Nakhon Nayok',355831],
+['Prachin Buri',398023],
+['Chachoengsao',618953],
+['Sa Kaeo',720898],
+['Chanthaburi',16845],
+['Trat',16174],
+['Rayong',15666],
+['Chon Buri',71770],
+['Samut Prakan',18768],
+['Samut Sakhon',6048],
+['Nakhon Pathom',321852],
+['Kanchanaburi',378076],
+['Ratchaburi',255225],
+['Samut Songkhram',2639],
+['Phetchaburi',289808],
+['Prachuap Khiri Khan',8577],
+['Chumphon',3962],
+['Ranong',664],
+['Surat Thani',5835],
+['Phangnga',1977],
+['Phuket',72],
+['Krabi',5374],
+['Trang',12063],
+['Nakhon Si Thammarat',220920],
+['Phatthalung',128984],
+['Songkhla',190242],
+['Satun',21563],
+['Pattani',99237],
+['Yala',18638],
+['Narathiwat',47937]
+
+        ]);
+
+        var options = {
+        region: 'TH',
+        resolution:'provinces',
+        colorAxis:{colors: [ '#92AE85','#B1D4A1','#D1FABE','#ADAD84','#D3D4A1','#F9FABE'
+        
+        ]}
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      } 
+ </script>  
     
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
     <div id="timechart_div"></div>
     <div id="histochart_div" style="width: 700px; height: 400px;"></div>
+    <div id="regions_div" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
