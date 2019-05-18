@@ -208,12 +208,56 @@
         chart.draw(data, options);
       } 
  </script>  
-    
+   <script type="text/javascript"> 
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+          ['Provice', 'area2560', 'ref'],
+          ['Ubon Ratchathani',61757,0],
+['Nakhon Ratchasima',14046,0],
+['Surin',104531,0],
+['Roi Et',24906,0],
+['Si Sa Ket',20447,0],
+['Buri Ram',9018,0],
+['Khon Kaen',22887,0],
+['Sakon Nakhon',90735,0],
+['Maha Sarakham',-25578,0],
+['Udon Thani',58057,01],
+['Chaiyaphum',2045,0],
+['Kalasin',4707,0],
+['Nakhon Phanom',28882,0],
+['Yasothon',-1400,0],
+['Amnat Charoen',-7245,0],
+['Nong Bua Lam Phu',-2079,0],
+['Nong Khai',53870,0],
+['Mukdahan',3387,0],
+['Bueng Kan',-483,0],
+['Loei',34648,0]
+
+
+        ]);
+
+        var options = {
+          title : 'ปริมาณพื้นที่เพาะปลูกข้าวปี 2560',
+          vAxis: {title: 'area'},
+          hAxis: {title: 'provice'},
+          seriesType: 'bars',
+          series: {1: {type: 'line'}}
+        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('devichart_div'));
+        chart.draw(data, options);
+      }
+     </script>
   </head>
   <body>
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
     <div id="timechart_div"></div>
     <div id="histochart_div" style="width: 700px; height: 400px;"></div>
     <div id="regions_div" style="width: 900px; height: 500px;"></div>
+    <div id="devichart_div" style="width: 900px; height: 500px;"></div>
   </body>
 </html>
