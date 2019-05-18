@@ -54,7 +54,7 @@
 
         var options = {
           chart: {
-            title: 'ราคาข้าว 3 ชนิด ข้าวหอมมะลิ,ข้าวเหนียว,ข้าวเจ้า ตั้งแต่ปี 2555-2561',
+           // title: 'ราคาข้าว 3 ชนิด ข้าวหอมมะลิ,ข้าวเหนียว,ข้าวเจ้า ตั้งแต่ปี 2555-2561',
            
           },
           bars: 'vertical',
@@ -103,7 +103,7 @@
 ]);
 
         var options = {
-          title: 'ราคาข้าวหอมมะลิ ตั้งแต่ปี 2540-2561',
+        //  title: 'ราคาข้าวหอมมะลิ ตั้งแต่ปี 2540-2561',
           legend: { position: 'none' },
           colors: ['#1b9e77']
         };
@@ -258,7 +258,7 @@
         ]);
 
         var options = {
-          title : 'ปริมาณพื้นที่เพาะปลูกข้าวในภาคตะวันออกเฉียงเหนือปี 2560',
+         // title : 'ปริมาณพื้นที่เพาะปลูกข้าวในภาคตะวันออกเฉียงเหนือปี 2560',
           vAxis: {title: 'พื้นที่ (ไร่)'},
           hAxis: {title: 'จังหวัด'},
           seriesType: 'bars',
@@ -340,7 +340,7 @@
         ]);
 
         var options = {
-          title: 'ข้อมูลขนาดพื้นที่เพาะปลูกกับพื้นที่เก็บเกี่ยวรายจังหวัดปี 2560',
+         // title: 'ข้อมูลขนาดพื้นที่เพาะปลูกกับพื้นที่เก็บเกี่ยวรายจังหวัดปี 2560',
           hAxis: {title: 'จังหวัด', minValue: 100000, maxValue:900000},
           vAxis: {title: 'พื้นที่ (ไร่)', minValue: 100000, maxValue: 900000},
           legend: 'none'
@@ -358,22 +358,22 @@
   </head>
   <body>
     <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณส่งออกข้าวของประเทศผู้ส่งออกที่สำคัญ 5 อันดับ</h1>
-    <div id="chart_div" style="width: 1200px; height: 900px; text-align: center;"></div>
+    <div id="chart_div" style="width: 900px; height: 800px; alight:center"></div>
     
-    <h1 style="color: black; background-color:#FEF3BA; text-align: center;">ราคาข้าว 3 ชนิด ข้าวหอมมะลิ,ข้าวเหนียว,ข้าวเจ้า ตั้งแต่ปี 2555-2561</h1>
+    <h1 style="color: black; background-color:#FEF3BA; text-align: center;">ข้อมูลพื้นที่เพาะปลูกข้าวรายจังหวัดปี 2560</h1>
     <div id="regions_div" style="width: 900px; height: 500px; alight:center"></div>
-    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณส่งออกข้าวของประเทศผู้ส่งออกที่สำคัญ 5 อันดับ</h1>
     
-    <div id="devichart_div" style="width: 900px; height: 500px;"></div>
-    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณส่งออกข้าวของประเทศผู้ส่งออกที่สำคัญ 5 อันดับ</h1>
+    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณพื้นที่เพาะปลูกข้าวในภาคตะวันออกเฉียงเหนือ ปี 2560</h1>  
+    <div id="devichart_div" style="width: 900px; height: 500px; alight:center"></div>
     
-    <div id="timechart_div"></div>
-    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณส่งออกข้าวของประเทศผู้ส่งออกที่สำคัญ 5 อันดับ</h1>
+    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ราคาข้าว 3 ชนิด ข้าวหอมมะลิ,ข้าวเหนียว,ข้าวเจ้า ปี 2555-2561</h1>
+    <div id="timechart_div" style = alight:center></div>
     
-    <div id="histochart_div" style="width: 700px; height: 400px;"></div>
-    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณส่งออกข้าวของประเทศผู้ส่งออกที่สำคัญ 5 อันดับ</h1>
+    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ราคาข้าวหอมมะลิ ปี 2540-2561</h1>
+    <div id="histochart_div" style="width: 700px; height: 400px; alight:center"></div>
     
+    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ข้อมูลขนาดพื้นที่เพาะปลูกกับพื้นที่เก็บเกี่ยวรายจังหวัด ปี 2560</h1>
     <div id="corchart_div" style="width: 900px; height: 500px;"></div>
-    <h1 style="color: black; background-color: #FEF3BA; text-align: center;">ปริมาณส่งออกข้าวของประเทศผู้ส่งออกที่สำคัญ 5 อันดับ</h1>
+    
   </body>
 </html>
