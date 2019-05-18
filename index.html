@@ -10,7 +10,7 @@
 
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Country');
-      data.addColumn('number', 'Amount of rice');
+      data.addColumn('ประเทศ', 'ปริมาณ(ล้านตัน)');
       data.addRows([
         
         ['India',12.04, ],
@@ -41,7 +41,7 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'ราคาข้าวเปลือกหอมมะลิ', 'ราคาข้าวเหนียว','ราคาข้าวเจ้า'],
+          ['ปี', 'ราคาข้าวเปลือกหอมมะลิ', 'ราคาข้าวเหนียว','ราคาข้าวเจ้า'],
           ['2555',  15365,      11925 ,10156],
           ['2556',  14859,      12586 ,8763],
           ['2557',  12914,       10141 ,7753],
@@ -76,7 +76,7 @@
       google.charts.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Price'],
+          ['ปี', 'ราคา(บาท/ตัน)'],
 ['2540',7404],
 ['2541',8298],
 ['2542',6737],
@@ -124,7 +124,7 @@
 
       function drawRegionsMap() {
         var data = google.visualization.arrayToDataTable([
-          ['Country', 'area'],
+          ['จังหวัด', 'พื้นที่เพาะปลูก (ไร่)'],
 ['Chiang Rai',1201535],
 ['Phayao',622640],
 ['Lampang',421891],
@@ -230,7 +230,7 @@
       function drawVisualization() {
         // Some raw data (not necessarily accurate)
         var data = google.visualization.arrayToDataTable([
-          ['Provice', 'area2560', 'ref'],
+          ['จังหวัด', 'พื้นที่เพาะปลูก', 'ref.'],
          ['Surin',104531,0],
 ['Sakon Nakhon',90735,0],
 ['Ubon Ratchathani',61757,0],
@@ -257,8 +257,8 @@
 
         var options = {
           title : 'ปริมาณพื้นที่เพาะปลูกข้าวในภาคตะวันออกเฉียงเหนือปี 2560',
-          vAxis: {title: 'area'},
-          hAxis: {title: 'provice'},
+          vAxis: {title: 'พื้นที่ (ไร่)'},
+          hAxis: {title: 'จังหวัด'},
           seriesType: 'bars',
           series: {1: {type: 'line'}},
         };
@@ -277,7 +277,7 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['province','grow','harvest'],
+          ['จังหวัด','พื้นที่เพาะปลูก(ไร่)','พื้นที่เก็บเกี่ยว(ไร่)'],
 ['Ubon Ratchathani',3862476,3756344],
 ['Nakhon Ratchasima',3485040,3293027],
 ['Surin',3070854,2907781],
@@ -339,8 +339,8 @@
 
         var options = {
           title: 'ข้อมูลขนาดพื้นที่เพาะปลูกกับพื้นที่เก็บเกี่ยวรายจังหวัดปี 2560',
-          hAxis: {title: 'grow', minValue: 100000, maxValue:900000},
-          vAxis: {title: 'harvest', minValue: 100000, maxValue: 900000},
+          hAxis: {title: 'จังหวัด', minValue: 100000, maxValue:900000},
+          vAxis: {title: 'พื้นที่ (ไร่)', minValue: 100000, maxValue: 900000},
           legend: 'none'
         };
 
